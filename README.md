@@ -1,10 +1,13 @@
 # Data-Encryption (LZ78)
 Aim :To find Compression ratio using LZ78
+
 Requirments :Python 3.4
+
 Theory:
 LZ78-based schemes work by entering phrases into a dictionary and then, when a
 repeat occurrence of that particular phrase is found, outputting the dictionary index
 instead of the phrase.
+
 Every step LZ78 will send a pair (i,a) to the output, where i is an index of the
 phrase into the dictionary and a is the next symbol following immediately after the
 found phrase. The dictionary is represented like the trie with numbered nodes. If
@@ -16,4 +19,5 @@ old phrase extended by the new symbol is then put into dictionary. This new phra
 is numbered by the smallest possible number.
 The coding will start with tree, that has only one node, which represents empty
 string.
+
 Encoder and Decoder Program
