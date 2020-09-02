@@ -1,23 +1,19 @@
-# Data-Encryption (LZ78)
-Aim :To find Compression ratio using LZ78
+Data Compression And Encryption
+Data Compression
+Data compression is the process of modifying, encoding or converting the bits structure of data in such a way that it consumes less space on disk. It enables reducing the storage size of one or more data instances or elements. Data compression is also known as source coding or bit-rate reduction.
 
-Requirments :Python 3.4
+Data Compression Methods
+There are two kinds of compression: Lossless and Lossy.
 
-Theory:
-LZ78-based schemes work by entering phrases into a dictionary and then, when a
-repeat occurrence of that particular phrase is found, outputting the dictionary index
-instead of the phrase.
+Lossy compression loses data, while lossless compression keeps all the data. With lossless compression we don’t get rid of any data. Instead, the technique is based on finding smarter ways to encode the data. With lossy compression we get rid of data, which is why we need to distinguish data from information.
 
-Every step LZ78 will send a pair (i,a) to the output, where i is an index of the
-phrase into the dictionary and a is the next symbol following immediately after the
-found phrase. The dictionary is represented like the trie with numbered nodes. If
-we go from the root to a certain node, we will get phrase from the input text.
-In each step we look for the longest phrase in dictionary, that would correspond to
-the unprocessed part of the input text. Index of this phrase together with the
-symbol, which follows the found part in input text, are then send to the output. The
-old phrase extended by the new symbol is then put into dictionary. This new phrase
-is numbered by the smallest possible number.
-The coding will start with tree, that has only one node, which represents empty
-string.
+Lossless compression allows the potential for a file to return to its original size, without the loss of a single bit of data, when the file is uncompressed. Lossless compression is the usual approach taken with executables, as well as with text and spreadsheet files, where the loss of words or numbers would change the information. Lossless compression can compress the data whenever redundancy is present. Therefore, lossless compression takes advantage of data redundancy.
 
-Encoder and Decoder Program
+Data Encryption
+Data encryption is a security method where information is encoded and can only be accessed or decrypted by a user with the correct encryption key. Encrypted data, also known as ciphertext, appears scrambled or unreadable to a person or entity accessing without permission.
+
+Types of Encryption – Symmetric and Asymmetric
+Encryption is often applied in two different forms, a symmetric key or an asymmetric key. A symmetric key, or secret key, uses one key to both encode and decode the information. This is best used for one to one sharing and smaller data sets. Asymmetric, or public key cryptography, uses two linked keys – one private and one public. The encryption key is public and can be used by anyone to encrypt. The opposite key is kept private and used to decrypt.
+
+How Data Encrytion Is Used
+Data Encryption is used to deter malicious or negligent parties from accessing sensitive data. An important line of defense in a cybersecurity architecture, encryption makes using intercepted data as difficult as possible. It can be applied to all kinds of data protection needs ranging from classified government intel to personal credit card transactions. Data encryption software, also known as an encryption algorithm or cipher, is used to develop an encryption scheme which theoretically can only be broken with large amounts of computing power.
